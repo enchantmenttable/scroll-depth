@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Depth Dimmer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="screens-container">
+    <!-- Main Screen -->
+    <div id="mainScreen" class="screen">
+      <div class="container">
+        <!-- Current Site Section -->
+        <div id="currentSiteSection" class="section current-site">
+          <div class="site-header">
+            <span id="currentDomain" class="domain">-</span>
+            <button id="toggleButton" class="btn btn-toggle" disabled>Start Tracking</button>
+          </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="section">
+          <h3>Settings</h3>
+
+          <div class="setting">
+            <label for="fadeSpeed">Fade Speed</label>
+            <div class="slider-container">
+              <input type="range" id="fadeSpeed" min="1" max="3" step="1" value="2">
+              <span id="fadeSpeedLabel" class="slider-label level-2">Level 2</span>
+            </div>
+            <p class="setting-hint">Higher = faster dimming</p>
+          </div>
+
+          <div class="setting">
+            <label for="recoveryTime">Recovery Time</label>
+            <div class="input-group">
+              <input type="number" id="recoveryTime" min="1" max="360" value="20" maxlength="3">
+              <span class="input-suffix">minutes</span>
+            </div>
+            <p class="setting-hint" style="margin-top: 6px;">Time to fully recover brightness</p>
+          </div>
+        </div>
+
+        <!-- Active Sites Button -->
+        <div class="section">
+          <button id="openSitesBtn" class="btn btn-sites">
+            <span>Active Sites</span>
+            <span id="siteCount" class="site-count">0</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sites Screen -->
+    <div id="sitesScreen" class="screen">
+      <div class="container">
+        <!-- Header with back button -->
+        <div class="screen-header">
+          <button id="backBtn" class="btn btn-back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back</span>
+          </button>
+        </div>
+
+        <!-- Add Site -->
+        <div class="section">
+          <div class="add-site">
+            <input type="text" id="newSiteInput" placeholder="Enter domain (e.g., twitter.com)">
+            <button id="addSiteBtn" class="btn btn-add">Add</button>
+          </div>
+
+          <ul id="siteList" class="site-list">
+            <!-- Populated dynamically -->
+          </ul>
+
+          <p id="emptyMessage" class="empty-message">No sites added yet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
