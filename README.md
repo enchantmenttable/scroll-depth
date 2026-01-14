@@ -1,5 +1,7 @@
 Scroll Depth Dimmer helps you take mindful breaks from endless scrolling by gradually dimming your screen the deeper you scroll on any webpage.
 
+Install via Chrome Web Store: [Scroll Depth Dimmer](https://chromewebstore.google.com/detail/scroll-depth-dimmer/anobmpkiiglkbhcfcfmajgpbiadfjdpp?authuser=1&hl=en)
+
 ---
 
 Other extensions (StayFocusd for example) are too strict. Sometimes it's inconvenient to get blocked out of Facebook while you're mid-conversation with your friends, or have found a really interesting post on Twitter. So this extension offers a nudge, not a wall. And it's good to practice your self-control muscle, too.
